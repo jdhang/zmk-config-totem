@@ -50,6 +50,7 @@
     // tap: left-parenthesis | shift + tap: less-than
     lpar_lt: lpar_lessthan {
       compatible = "zmk,behavior-mod-morph";
+      label = "LPAR_GREATER_THAN"
       #binding-cells = <0>;
       bindings = <&kp LPAR>, <&kp LT>;
       mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -58,6 +59,7 @@
     // tap: right-parenthesis | shift + tap: greater-than
     rpar_gt: rpar_greaterthan {
       compatible = "zmk,behavior-mod-morph";
+      label = "RPAR_LESS_THAN"
       #binding-cells = <0>;
       bindings = <&kp RPAR>, <&kp GT>;
       mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -66,6 +68,7 @@
     // tap: backslash | shift + tap: forwardslash
     bslh_fslh: backslash_forwardslash {
       compatible = "zmk,behavior-mod-morph";
+      label = "BACKSLASH_FORWARDSLASH"
       #binding-cells = <0>;
       bindings = <&kp BSLH>, <&kp FSLH>;
       mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -74,6 +77,7 @@
     // tap: dot | shift + tap: comma 
     dot_comma: dot_comma {
       compatible = "zmk,behavior-mod-morph";
+      label = "DOT_COMMA"
       #binding-cells = <0>;
       bindings = <&kp DOT>, <&kp COMMA>;
       mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -82,7 +86,7 @@
 
   macros {
     arrow_fn: arrow_fn {
-      label = "arrow function";
+      label = "ARROW_FUNCTION";
       compatible = "zmk,behavior-macro";
       #binding-cells = <0>;
       bindings
