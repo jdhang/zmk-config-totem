@@ -140,7 +140,7 @@ label= "SYM"                               ;
 
                 &trans      &trans      &kp HASH    &kp GRAVE   &kp PRCNT       &kp AMPS    &kp LBKT    &kp RBKT    &kp STAR    &kp DQT 
                 &kp EXCL    &kp AT      &kp CARET   &kp EQUAL   &arrow_fn       &kp PIPE    &lpar_lt    &rpar_gt    &kp COLON   &kp SQT       
-    &trans      &trans      &trans      &kp DLLR    &kp TILDE   &kp UNDER       &kp MINUS   &kp LBRC    &kp RBRC    &trans      &blsh_fslh    &trans         
+    &trans      &trans      &trans      &kp DLLR    &kp TILDE   &kp UNDER       &kp MINUS   &kp LBRC    &kp RBRC    &trans      &bslh_fslh    &trans         
                                         &trans      &skq LALT   &trans          &skq LGUI   &skq LSHFT  &trans      
                         >;
                 };
