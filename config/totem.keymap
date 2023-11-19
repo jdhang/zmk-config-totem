@@ -34,41 +34,59 @@
   tapping-term-ms = <170>;
 };
 
-// sticky quick release
-ZMK_BEHAVIOR(skq, sticky_key,
-  release-after-ms = <1000>;
-  binding = <&kp>;
-  quick-release;
-  ignore-modifiers;
-)
+/ {
+  behaviors {
+    // sticky quick release
+    skq: sticky_key_quick_release {
+      compatible = "zmk,behavior-sticky-key";
+      label = "STICKY_KEY_QUICK_RELEASE";
+      #binding-cells = <1>;
+      bindings = <&kp>;
+      release-after-ms = <1000>;
+      quick-release;
+      ignore-modifiers;
+    };
 
-// tap: left-parenthesis | shift + tap: less-than
-ZMK_BEHAVIOR(lpar_lt, mod_morph,
-  bindings = <&kp LPAR>, <&kp LT>;
-  mods = <(MOD_LSFT|MOD_RSFT)>;
-)
+    // tap: left-parenthesis | shift + tap: less-than
+    lpar_lt: lpar_lessthan {
+      compatible = "zmk,behavior-mod-morph";
+      #binding-cells = <0>;
+      bindings = <&kp LPAR>, <&kp LT>;
+      mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
 
-// tap: right-parenthesis | shift + tap: greater-than
-ZMK_BEHAVIOR(rpar_gt, mod_morph,
-  bindings = <&kp RPAR>, <&kp GT>;
-  mods = <(MOD_LSFT|MOD_RSFT)>;
-)
+    // tap: right-parenthesis | shift + tap: greater-than
+    rpar_gt: rpar_greaterthan {
+      compatible = "zmk,behavior-mod-morph";
+      #binding-cells = <0>;
+      bindings = <&kp RPAR>, <&kp GT>;
+      mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
 
-// tap: backslash | shift + tap: forwardslash
-ZMK_BEHAVIOR(bslh_fslh, mod_morph,
-  bindings = <&kp BSLH>, <&kp FSLH>;
-  mods = <(MOD_LSFT|MOD_RSFT)>;
-)
+    // tap: backslash | shift + tap: forwardslash
+    bslh_fslh: backslash_forwardslash {
+      compatible = "zmk,behavior-mod-morph";
+      #binding-cells = <0>;
+      bindings = <&kp BSLH>, <&kp FSLH>;
+      mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+ 
+    // tap: dot | shift + tap: comma 
+    dot_comma: dot_comma {
+      compatible = "zmk,behavior-mod-morph";
+      #binding-cells = <0>;
+      bindings = <&kp DOT>, <&kp COMMA>;
+      mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+  };
 
-// tap: dot | shift + tap: comma 
-ZMK_BEHAVIOR(dot_comma, mod_morph,
-  bindings = <&kp DOT>, <&kp COMMA>;
-  mods = <(MOD_LSFT|MOD_RSFT)>;
-)
-
-ZMK_BEHAVIOR(arrow_fn, macro,
-  bindings = <&macro_tap &kp EQUAL>, <&macro_tap &kp GT>;
-)
+  macros {
+    arrow_fn: arrow_fn {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&macro_tap &kp EQUAL>, <&macro_tap &kp GT>;
+    };
+  };
 
         keymap {
                 compatible = "zmk,keymap";
