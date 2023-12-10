@@ -196,7 +196,7 @@ label= "NUM"                               ;
 
                 &trans      &trans      &trans      &trans      &trans          &kp STAR    &kp KP_N7   &kp KP_N8   &kp KP_N9   &kp KP_PLUS
                 &skq LCTRL  &skq LALT   &skq LGUI   &skq LSHFT  &kp PRCNT       &kp FSLH    &kp KP_N4   &kp KP_N5   &kp KP_N6   &kp KP_MINUS
-    &bt BT_CLR  &bt BT_PREV &bt BT_NXT  &trans      &trans      &kp COMMA       &kp DOT     &kp KP_N1   &kp KP_N2   &kp KP_N3   &kp KP_MULTIPLY &kp FSLH      
+    &bt BT_CLR  &bt BT_PRV &bt BT_NXT  &trans      &trans      &kp COMMA       &kp DOT     &kp KP_N1   &kp KP_N2   &kp KP_N3   &kp KP_MULTIPLY &kp FSLH      
                                         &trans      &trans      &trans          &trans      &kp KP_N0   &kp KP_N0      
                         >;
                 };
